@@ -5,37 +5,30 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package edu.wpi.first.wpilibj.templates;
+package edu.wpi.first.wpilibj.usfirst.FRC4068;
 
 
 import edu.wpi.first.wpilibj.SimpleRobot;
+import edu.wpi.first.wpilibj.usfirst.FRC4068.subsystems.DriveTrain;
+import edu.wpi.first.wpilibj.usfirst.FRC4068.subsystems.DStation;
 
-/**
- * The VM is configured to automatically run this class, and to call the
- * functions corresponding to each mode, as described in the SimpleRobot
- * documentation. If you change the name of this class or the package after
- * creating this project, you must also update the manifest file in the resource
- * directory.
- */
 public class RobotTemplate extends SimpleRobot {
-    /**
-     * This function is called once each time the robot enters autonomous mode.
-     */
+
     public void autonomous() {
-        
+        while(isAutonomous() && isEnabled()){
+            
+        }
     }
-
-    /**
-     * This function is called once each time the robot enters operator control.
-     */
     public void operatorControl() {
-
+        while(isOperatorControl() && isEnabled()){
+            DriveTrain.drive(DStation.driver.getRawAxis(1), DStation.driver.getRawAxis(2), true);
+        }
     }
-    
-    /**
-     * This function is called once each time the robot enters test mode.
-     */
     public void test() {
-    
+        while(isTest() && isEnabled()){
+            
+        }
     }
+    
+    
 }
