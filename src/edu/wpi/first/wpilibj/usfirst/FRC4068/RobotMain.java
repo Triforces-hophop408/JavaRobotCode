@@ -11,6 +11,7 @@
 
 package edu.wpi.first.wpilibj.usfirst.FRC4068;
 
+
 import edu.wpi.first.wpilibj.SimpleRobot;
 import edu.wpi.first.wpilibj.usfirst.FRC4068.subsystems.*;
 
@@ -37,12 +38,17 @@ public class RobotMain extends SimpleRobot {
     /**
      * This function is called once each time the robot enters operator control.
      */
-    public void operatorControl() {
-        Launcher.startCompressor();
+    
+    double claws;
+    boolean holdClaws;
+    
+    public void operatorControl(){
+    	Launcher.startCompressor();
         DriveTrain.setSafety(true);
         Claws.setSafety(true);
-        double claws = 0;
-        boolean holdClaws = false;
+        claws = 0;
+        holdClaws = false;
+        
         while (isOperatorControl() && isEnabled()){
             DriveTrain.drive(DStation.getAxisDriver(1), -(DStation.getAxisDriver(2)));
             
@@ -72,6 +78,15 @@ public class RobotMain extends SimpleRobot {
         }
     }
     
+    /*public void operatorControl() {
+        Launcher.startCompressor();
+        DriveTrain.setSafety(true);
+        Claws.setSafety(true);
+        double claws = 0;
+        boolean holdClaws = false;
+        
+    }
+    */
     /**
      * This function is called once each time the robot enters test mode.
      */
