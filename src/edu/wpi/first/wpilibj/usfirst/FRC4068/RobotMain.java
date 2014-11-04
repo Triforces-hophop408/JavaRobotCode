@@ -74,32 +74,31 @@ public class RobotMain extends SimpleRobot {
              *For the drive train 
              */
             if (driverjoystick[8]){
-                motor power = 100%;
+                motor.power = 100%;
             }
             else if (driverjoystick[7]){
-                motor power = 87.5%;
+                motor.power = 87.5%;
             }
             else if (driverjoystick[6]){
-                motor power = 75%;
+                motor.power = 75%;
             }
             else if (driverjoystick[5]){
-                motor power = 62.5%;
+                motor.power = 62.5%;
             }
             else if (driverjoystick[4]){
-                motor power = 50%;
+                motor.power = 50%;
             }
             else if (driverjoystick[3]){
-                motor power = 37.5%;
+                motor.power = 37.5%;
             }
             else if (driverjoystick[2]){
-                motor power = 25%;
+                motor.power = 25%;
             }
             else if (driverjoystick[1]){
-                motor power = 12.5%;
-            }
+                motor.power = 12.5%;
+                       }
 
 
-            
             
         }
         
